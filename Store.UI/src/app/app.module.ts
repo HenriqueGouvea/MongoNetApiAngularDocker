@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InsertComponent } from './product/insert/insert.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -29,7 +30,8 @@ const cookieConfig: NgcCookieConsentConfig = {
   declarations: [
     AppComponent,
     ListComponent,
-    InsertComponent
+    InsertComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,

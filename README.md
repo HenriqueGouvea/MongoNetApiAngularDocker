@@ -7,19 +7,19 @@ The API and MongoDB are containerized with Docker and they are orchestrated via 
 
 The single entity used is the `Product` entity that has the following properties:
 
-	* ID
-	* Name
-	* PictureUrl
-	* Price
-	* IsDeleted
+* ID
+* Name
+* PictureUrl
+* Price
+* IsDeleted
 
 ## Endpoints
 
 There are 3 endpoints:
 
-	* Get all products: get all products that are not deleted
-	* Get all products by name with pagination: get app products given a name or a part of a name.
-	* Create: creates a new product
+* Get all products: get all products that are not deleted
+* Get all products by name with pagination: get app products given a name or a part of a name.
+* Create: creates a new product
 
 ## Roadmap
 
@@ -44,8 +44,8 @@ There are 3 endpoints:
 
 ## Technologies
 
-	* .NET Core 7
-	* MongoDB
-	* Docker
-	* Angular
-	* Typescript
+* .NET Core 7
+* MongoDB
+* Docker
+* Angular
+* Typescript

@@ -1,6 +1,6 @@
 # .NET API with MongoDB, Docker and Angular UI
 
-This repository containes and API reading and creating documents in MongoDB. It has an UI developed in Angular.
+This repository containes and API reading and creating documents in MongoDB. It has an UI developed in Angular with two pages consuming these endpoints.
 The API and MongoDB are containerized with Docker and they are orchestrated via Docker Compose.
 
 ## Documents
@@ -32,13 +32,15 @@ There are 3 endpoints:
 	- [x] Add the exception handling middleware
 	- [ ] Use logs
 	- [ ] Add unit tests
+	- [ ] API monitoring (Application Insights or Kibana)
+	- [ ] Caching
 
 - [ ] Front-end
-	- [ ] Create the Angular app
-	- [ ] Create the product list screen
+	- [x] Create the Angular app
+	- [x] Create the product list screen
+	- [x] Create the product creation screen
+	- [x] Add GDPR compliance measures (cookie consent and privacy policy page)
 	- [ ] Add the product filter by name and pagination
-	- [ ] Create the product creation screen
-	- [ ] Add GDPR compliance measures
 	- [ ] Add unit tests
 	- [ ] Add E2E tests
 

@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  storedb:
+    image: mongo
+
+  store.api:
+    image: ${DOCKER_REGISTRY-}storeapi
+    build:
+      context: .
+      dockerfile: Store.API/Dockerfile
+
+volumes:
+  mongo_data:

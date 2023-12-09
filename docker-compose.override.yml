@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  storedb:
+    container_name: store-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  store.api:
+    container_name: store.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "StoreDatabaseSettings:ConnectionString=mongodb://storedb:27017"
+    depends_on:
+      - storedb
+    ports:
+      - "8000:80"

@@ -7,6 +7,23 @@ import { ListComponent } from './product/list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InsertComponent } from './product/insert/insert.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+
+const cookieConfig: NgcCookieConsentConfig = {
+  cookie: {
+    domain: 'localhost'
+  },
+  palette: {
+    popup: {
+      background: '#000'
+    },
+    button: {
+      background: '#e7e7e7'
+    }
+  },
+  theme: 'edgeless',
+  type: 'opt-out'
+};
 
 @NgModule({
   declarations: [
@@ -18,7 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgcCookieConsentModule.forRoot(cookieConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

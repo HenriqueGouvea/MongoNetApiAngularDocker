@@ -20,7 +20,6 @@ namespace Store.API.Application.Exceptions
             }
             catch (Exception ex)
             {
-                // TODO: add a logging
                 await HandleExceptionAsync(context, ex);
             }
         }

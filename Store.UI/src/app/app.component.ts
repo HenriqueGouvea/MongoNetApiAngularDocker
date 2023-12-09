@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NgcCookieConsentService, NgcInitializationErrorEvent, NgcInitializingEvent, NgcNoCookieLawEvent, NgcStatusChangeEvent } from 'ngx-cookieconsent';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +9,4 @@ import { Subscription } from 'rxjs';
 export class AppComponent {
   constructor(private cookieService: NgcCookieConsentService) {
   }
-
-  title = 'Store.UI';
 }

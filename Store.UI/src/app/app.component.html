@@ -10,14 +10,14 @@
         </a>
   
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Products</a>
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Insert</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" routerLink="/products">Products</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" routerLink="/insert">Insert</a>
         </nav>
       </div>
     </header>
   
     <main>
-        <app-list></app-list>
+      <router-outlet></router-outlet>
     </main>
   
     <footer class="pt-4 my-md-5 pt-md-5 border-top">

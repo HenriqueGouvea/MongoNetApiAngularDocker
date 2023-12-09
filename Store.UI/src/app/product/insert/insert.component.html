@@ -1,1 +1,74 @@
-<p>insert works!</p>
+<div class="row g-5">
+    <div class="col-md-12 col-lg-12">
+        <h4 class="mb-3">New product</h4>
+        <form class="needs-validation" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="row g-3 mb-3">
+                <div class="col-sm-4">
+                    <label 
+                        for="name" 
+                        class="form-label">
+                        Name
+                    </label>
+                    <input 
+                        type="text" 
+                        class="form-control"
+                        id="name" 
+                        formControlName="name"
+                        [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
+                    <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                        <div *ngIf="f['name'].errors['required']">
+                            Name is required
+                        </div>
+                        <div *ngIf="f['name'].errors['minlength']">
+                            Name must be at least 3 characters
+                        </div>
+                        <div *ngIf="f['name'].errors['maxlength']">
+                            Name must not exceed 50 characters
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <label 
+                        for="price" 
+                        class="form-label">
+                            Price
+                        </label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="price"
+                        formControlName="price"
+                        [ngClass]="{ 'is-invalid': submitted && f['price'].errors }">
+                    <div *ngIf="submitted && f['price'].errors" class="invalid-feedback">
+                        <div *ngIf="f['price'].errors['required']">
+                            Price is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <label 
+                        for="pictureUrl" 
+                        class="form-label">
+                            Picture URL
+                        </label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="pictureUrl" 
+                        formControlName="pictureUrl"
+                        [ngClass]="{ 'is-invalid': submitted && f['pictureUrl'].errors }">
+                    <div *ngIf="submitted && f['pictureUrl'].errors" class="invalid-feedback">
+                        <div *ngIf="f['pictureUrl'].errors['required']">
+                            Picture URL is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary">Insert</button>
+            <button class="btn btn-secondary ms-2" (click)="back();">Back</button>
+        </form>
+    </div>
+</div>

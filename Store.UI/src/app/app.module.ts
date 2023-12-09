@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './product/list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InsertComponent } from './product/insert/insert.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InsertComponent } from './product/insert/insert.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
